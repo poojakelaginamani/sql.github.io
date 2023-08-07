@@ -154,3 +154,76 @@ INSERT INTO SBI_info(Branch_id,branch,withdrawn,chasher,S_loans,headquarter,curr
 INSERT INTO SBI_info(Branch_id,branch,withdrawn,chasher,S_loans,headquarter,currency,account_no,ifsc_code) VALUES (19,'Kolar','Savings','Customer','Shri Shakati','Mumbai',2,9898989,002342);
 INSERT INTO SBI_info(Branch_id,branch,withdrawn,chasher,S_loans,headquarter,currency,account_no,ifsc_code) VALUES (13,'Mandya','Cuurent','Customer','land','Mumbai',10,1231231,009421);
 INSERT INTO SBI_info(Branch_id,branch,withdrawn,chasher,S_loans,headquarter,currency,account_no,ifsc_code) VALUES (12,'mangaluru','Savings','Customer','Education','Mumbai',2.9,2324509,008634);
+
+
+
+
+select * from sbi_info;
+
+where: 
+
+SELECT * FROM sbi_info where branch_id = 3;
+
+select * from sbi_info where withdrawn = 'Cuurent' AND headquarter = 'Mumbai'
+AND S_loans = 'lan' AND branch_id = 13;
+
+AND: 
+COND1    COND2    RES
+TRUE     FALSE    FALSE
+FALSE    TRUE     FALSE
+FALSE    FALSE    FALSE
+TRUE     TRUE     TRUE
+
+
+OR
+COND1    COND2    RES
+TRUE     FALSE    TRUE
+FALSE    TRUE     TRUE
+FALSE    FALSE    FALSE
+TRUE     TRUE     TRUE
+
+SELECT * FROM sbi_info where branch_id = 5 OR 
+S_loans = 'Gol' or headquarter = 'Mum' or ifsc_code = 112;
+
+select * from sbi_info where branch_id = 1 or branch_id = 3 or branch_id = 5 or branch_id = 7;
+
+IN: 
+
+SELECT * FROM sbi_info where branch_id IN (1,3,5,7);
+
+NOT IN:
+
+SELECT * FROM sbi_info where branch_id not in (1,2);
+
+DML: 
+1) SELECT
+2) INSERT
+3) UPDATE
+
+SELECT * FROM sbi_info;
+
+UPDATE table_name set column_name = 'data' where condition;
+
+update sbi_info set headquarter = 'Bengaluru' where branch_id = 1;
+
+
+Select * from elephants_info where e_name='Abigali';  
+select * from elephants_info;
+
+AND :
+select * from elephants_info where elephant_age=33 AND e_habitat = 'Zoo';
+
+OR :
+ select * from elephants_info where dessert = 'Small Plant' or e_weight = 56 or e_bodies='fat';
+ 
+ IN :
+ select * from elephants_info where elephant_age IN (12,25,56,17,50,58);
+
+NOT IN :
+select * from elephants_info where elephant_age not in(12,58,50,25);
+
+update elephants_info set e_land='SouthNorth' where e_name='Babar';
+
+
+
+
